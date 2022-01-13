@@ -12,8 +12,8 @@ This is a [link](https://google.com) to Google
 
 You can even embed images within the document
 
-![Image](https://images.unsplash.com/photo-1517976547714-720226b864c1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c3BhY2V4fGVufDB8fDB8fA%3D%3D&w=1000&q=80)	
-(SpaceX)
+![Image](https://logo.clearbit.com/spacex.com)	
+
 
 ---
 

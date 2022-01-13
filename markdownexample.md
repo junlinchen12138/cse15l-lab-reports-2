@@ -1,8 +1,10 @@
 [<- Back](https://mbookucsd.github.io/cse15l-lab-reports/index.html)
 
 My name is Moshe Bookstein
+
 This is my example page for markdown.
 You can make *italic* text and **bold** text.
+
 There are different heading sizes.
 # Heading
 ## Heading
@@ -29,7 +31,9 @@ Here is another way to make lists, these are numbered.
 3. Three
 
 You can make inline code or blockquotes.
+
 `Inline code is awesome`
+
 >So are blockquotes
 >
 >See?

@@ -21,5 +21,4 @@ Log into your account
 
 
 
-
 ![Image](vscodestartup.png)

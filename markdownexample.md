@@ -2,9 +2,10 @@
 
 My name is Moshe Bookstein
 This is my example page for markdown.
-You can make italic text and bold text.
+You can make *italic* text and **bold** text.
 There are different heading sizes.
 # Heading
+## Heading
 ### Heading
 
 This is a [link](https://google.com) to Google

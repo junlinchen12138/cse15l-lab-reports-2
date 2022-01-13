@@ -168,4 +168,4 @@ This process created two new files on your computer, a **public** key and a *pri
 ## Optimizing Remote Running
 
 
-![Image](vscodestartup.png)
+![Image](vsstartup.png)

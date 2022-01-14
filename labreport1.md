@@ -3,7 +3,7 @@
 # Lab Report 1
 by Moshe Bookstein
 
-[For a summary click here](labreport1.html/#Summary)
+[For a summary click here](labreport1.html#Summary)
 
 # Full Guide
 ## Installing VScode
@@ -184,7 +184,7 @@ $ ssh cs15lwi22@ieng6.ucsd.edu "ls -a"
 Great job, you can now access, copy files to, and run commands on a remote server.
 
 
-# Summary
+## Summary
 
 For those of you with no time to spare, here is a quick summary of everything this document goes over.
 

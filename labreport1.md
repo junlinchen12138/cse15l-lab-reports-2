@@ -3,7 +3,9 @@
 # Lab Report 1
 by Moshe Bookstein
 
+[For a summary click here](labreport1.html/#Summary)
 
+# Full Guide
 ## Installing VScode
 ---
 The way that these instructions are written is using for use with VScode. However, they are not restricted to it only. If you don't have it installed. Here is how you go about installing it.
@@ -123,7 +125,7 @@ While you are still logged into the server, try running the file with `javac` an
 
 
 ##  **Important!!!** 
-**Something to be aware of is that *SCP DOES NOT CHECK* if that file already exists in the directory. If it finds a file with the same name, it will just overwrite that file. You should try this, make a change to the file you have saved locally, use SCP to copy it over to the server again, and then run it again and see if the output has changed.** 
+***SCP DOES NOT CHECK* if that file already exists in the directory. If it finds a file with the same name, it will just overwrite that file. You should try this, make a change to the file you have saved locally, use SCP to copy it over to the server again, and then run it again and see if the output has changed.** 
 ---
 
 
@@ -180,3 +182,116 @@ $ ssh cs15lwi22@ieng6.ucsd.edu "ls -a"
 
 
 Great job, you can now access, copy files to, and run commands on a remote server.
+
+
+# Summary
+
+For those of you with no time to spare, here is a quick summary of everything this document goes over.
+
+---
+### 1. Installing VScode 
+
+Download and Install VSCode from this link. [https://code.visualstudio.com/](https://code.visualstudio.com/)
+If you have already downloaded this before, skip this step.
+
+---
+### 2. Remotely Connecting
+
+[Get OpenSSH](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_install_firstuse) if you do not have it already
+
+Get your course specific account from this link. [https://sdacs.ucsd.edu/~icc/index.php](https://sdacs.ucsd.edu/~icc/index.php) Your account looks like this `cs15lwi22***`
+
+Open VSCode and navigate to Terminal -> New Terminal
+
+Use the `ssh` command to log into the `ieng6` server. 
+```
+$ ssh cs15lwi22***@ieng6.ucsd.edu
+```
+If you get a warning, type yes.
+
+Enter your password, nothing will show as you type.
+
+---
+### 3. Trying Some Commands
+
+
+Try some commands and see what they do.
+|Commands |
+|-----|
+|cd ~|
+|cd|
+|ls -lat|
+|ls -a|
+
+Log out with either Ctrl-D or by typing `exit`.
+
+---
+### 4. Moving Files with scp
+
+
+To copy a file from your computer to the server, use the `scp` command. 
+
+Create a file called `WhereAmI.java` with this code in it.
+
+```
+class WhereAmI {
+  public static void main(String[] args) {
+    System.out.println(System.getProperty("os.name"));
+    System.out.println(System.getProperty("user.name"));
+    System.out.println(System.getProperty("user.home"));
+    System.out.println(System.getProperty("user.dir"));
+  }
+}
+```
+
+Copy it to the server using the `scp` command.
+
+```
+$ scp WhereAmI.java cs15lwi22***@ieng6.ucsd.edu:~/
+```
+
+Login to `ieng6` again using `ssh`, and use the `ls` command. You should see the file in that directory.
+
+While you are still logged into the server, try running the file with `javac` and `java` and see how the output of the file differs from when you ran it locally on your own computer.
+
+##  **Important!!!** 
+***SCP DOES NOT CHECK* if that file already exists in the directory. If it finds a file with the same name, it will just overwrite that file. You should try this, make a change to the file you have saved locally, use SCP to copy it over to the server again, and then run it again and see if the output has changed.** 
+---
+
+### 5. Setting an SSH Key
+--- 
+
+SSH keys allow you to use ssh and scp commands without typing your password every time.
+
+Run `ssh-keygen` and go through the proccess below.
+
+![Image](sshkeygen.png)
+
+We need to make a place to put the file. `ssh` into the server, and make a directory using `mkdir` and then exit the server.
+
+```
+$ ssh cs15lwi22***@ieng6.ucsd.edu
+Password:
+```
+```
+$ mkdir .ssh
+```
+
+Now back on your computer, use `scp` to copy the `.pub` key over to the server.
+```
+$ scp C:\Users\Username\.ssh cs15lwi22***@ieng6.ucsd.edu:~/.ssh/authorized_keys
+```
+---
+### 6. Optimizing Remote Running
+
+There are some ways to optimise running commands remotely, some are listed below.
+
+1. After the SSH commands, you can include other commands located within quotes that will execute on the home directory of the server you’re logging into.
+`$ ssh cs15lwi22@ieng6.ucsd.edu "ls -a"`
+
+2. Using the up and down arrow keys will bring up the most recently used commands you have typed in.
+
+3. You can separate commands with semi-colons within quotes to execute multiple commands in one line like this:
+```
+ssh cs15lwi22ahy@ieng6.ucsd.edu "ls -a; javac WhereAmI.java; java WhereAmI"
+```

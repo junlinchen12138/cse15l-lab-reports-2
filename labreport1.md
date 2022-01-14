@@ -38,6 +38,7 @@ Go to this link and follow the steps below.
 1. Log into your account 
 
 2. Under 'Additional Accounts' click  the button labled `cs15lwi22***`
+
 ![Image](courseaccount.png)
 
 3. Your course specific account is your username listed on the page which is identified by the letters shown at the end of your username.

@@ -3,12 +3,14 @@
 # Lab Report 1
 by Moshe Bookstein
 
+Updated: Jan 13, 2022 03:35 UTC
+
 [For a summary click here](https://mbookucsd.github.io/cse15l-lab-reports/labreport1.html#summary)
 
 # Full Guide
 ## Installing VScode
 ---
-The way that these instructions are written is using for use with VScode. However, they are not restricted to it only. If you don't have it installed. Here is how you go about installing it.
+The way that these instructions are written is using for use with VScode. However, they are not restricted to it only. If you don't have it installed, here is how you go about installing it.
 
 Visit [https://code.visualstudio.com/](https://code.visualstudio.com/) and click download. After it downloads, click on it and go through the install proccess.
 
@@ -22,7 +24,7 @@ Once you install, you should see this open up
 
 ### Get OpenSSH
 ---
-To start this assignment you will need to install OpenSSH, this allows you to use SSH, , to connect to remote locations that support this kind of connection.
+To start this assignment you will need to install OpenSSH, this allows you to use SSH to connect to remote locations that support this kind of connection.
 
 Follow this link and then continue below when done.
 
@@ -31,7 +33,7 @@ Follow this link and then continue below when done.
 
 ### Accessing Course-Specific Account
 ---
-After you install OpenSSH you will need to get your course specifc accpount.
+After you install OpenSSH you will need to get your course specifc account.
 
 Go to this link and follow the steps below.
 **[https://sdacs.ucsd.edu/~icc/index.php](https://sdacs.ucsd.edu/~icc/index.php)**
@@ -43,7 +45,7 @@ Go to this link and follow the steps below.
 
 ![Image](courseaccount.png)
 
-3. Your course specific account is your username listed on the page which is identified by the letters shown at the end of your username.
+Your course specific account is your username listed on the page which is identified by the letters shown at the end of your username.
 
 ### Using SSH
 ---
@@ -51,13 +53,13 @@ We will be using Visual Studio Code to connect to the remote servers. Open VSCod
 
 ![Image](newterminal.png)
 
-Enter this into the terminal with `**` replaced with the letters from the end of your username.
+Enter this into the terminal with `***` replaced with the letters from the end of your username.
 ```
-$ ssh cs15lwi22**@ieng6.ucsd.edu
+$ ssh cs15lwi22***@ieng6.ucsd.edu
 ```
 The first time you connect to the server your computer may give you this warning message. 
 ```
-$ ssh cs15lwi22**@ieng6.ucsd.edu
+$ ssh cs15lwi22***@ieng6.ucsd.edu
 The authenticity of host 'ieng6.ucsd.edu (128.54.70.227)' can't be established.
 RSA key fingerprint is SHA256:kshsjr6nYH+sySHnhwerjsu7grPEyZTDl/1xgsyd4cec.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? 
@@ -82,7 +84,7 @@ Below are some commands that you might want to try and run.
 |cp /home/linux/ieng6/cs15lwi22/public/hello.txt ~/|
 |cat /home/linux/ieng6/cs15lwi22/public/hello.txt|
 
-For example:
+For example:  `ls -lat`
 
 ![Image](cmdexample.png)
 
@@ -94,7 +96,7 @@ After you use some of these commands you should log out of the server using eith
 
 ## Moving Files with scp
 ---
-As of now we have seen that we can login to a remote computer and run commands on it. Something that is extremely useful when working on remote computers is be the ability to copy files from your computer to another computer. While there are many ways to do this, the way that we will use in this assignment is called `scp`. SCP (secure copy) is a command that you run from the terminal on the device that has a file you wish to copy to another device. The command copies that file onto the server you that you tell it to. Since you run this from your own terminal, you should not be logged into `ieng6` when running `scp` command.
+As of now we have seen that we can login to a remote computer and run commands on it. Something that is extremely useful when working on remote computers is be the ability to copy files from your computer to another computer. While there are many ways to do this, the way that we will use in this assignment is called `scp`. SCP (secure copy) is a command that you run from the terminal on the device that has a file you wish to copy to another device. The command copies that file onto the server you that you tell it to. Since you run this from your own terminal, you should not be logged into `ieng6` when running the `scp` command.
 
 To start, we need to file to copy over. On your computer create a file called `WhereAmI.java` and place this code within it. 
 
@@ -131,13 +133,13 @@ While you are still logged into the server, try running the file with `javac` an
 
 ## Setting an SSH Key
 ---
-While typing your password in once or twice doesn't seem like it takes much time, over the course of even a quarter, you might type it in a hundred or two hundred times. This is a significant amount of time to be spending typing in your password, and people that figured out better ways of confirming that the person running the command is authorized to do so. we are going to be using something called an SSH key to pre-approve our computer to log into the server without having to type in the password every time. 
+While typing your password in once or twice doesn't seem like it takes much time, over the course of even a quarter, you might type it in a hundred or two hundred times. This is a significant amount of time to spend typing in your password and people have figured out better ways of confirming that the person running the command is authorized to do so. We are going to be using something called an SSH key to pre-approve our computer to log into the server without having to type in the password every time. 
 
 The main idea behind an SSH key is that on our computer, we create a public and private key using the command `ssh-keygen` . we give the public key to the server and keep the private key on our machine, and then when we try to log into the server the server will check with our computer that have the private key. If we do it will just log us in. This is an extremely common setup in any work environment that requires using code on a server. 
 
 Below is what you should run on your computer(the client)
 
-*Instead of the file xxxxxxxxxxxxx, enter a path to the new file location on your computer such as C:\Users\Username/.ssh/id_rsa*
+*Instead of the file xxxxxxxxxxxxx, enter a path to the new file location on your computer such as C:\Users\Username/.ssh/id_rsa it should be within the .ssh folder of your user account*
 
 ![Image](sshkeygen.png)
 

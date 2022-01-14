@@ -167,6 +167,9 @@ You should replace the file path above with the file path to your`.pub` file and
 
 After this file is copied over, you should be able to `ssh` or `scp` to the server without entering your password.
 
+![Image](loginnopass.png)
+
+
 ## Optimizing Remote Running
 --- 
 Now that we have set up power computers to more easily connect to the server, you may be wondering if there's even more pleasant ways of executing commands on the server, and there are. 

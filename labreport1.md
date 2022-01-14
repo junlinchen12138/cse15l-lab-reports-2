@@ -6,11 +6,12 @@ by Moshe Bookstein
 
 ## Installing VScode
 ---
-The way that these instructions are written is using vs code. If you've never used vs code before, or you don't have it installed. Here is how you go about installing it.
+The way that these instructions are written is using for use with VScode. However, they are not restricted to it only. If you don't have it installed. Here is how you go about installing it.
 
 Visit [https://code.visualstudio.com/](https://code.visualstudio.com/) and click download. After it downloads, click on it and go through the install proccess.
 
 Once you install, you should see this open up
+
 ![Image](vsstartup.png)
 
 
@@ -34,13 +35,12 @@ Go to this link and follow the steps below.
 **[https://sdacs.ucsd.edu/~icc/index.php](https://sdacs.ucsd.edu/~icc/index.php)**
 
 
-Log into your account 
+1. Log into your account 
 
-Under 'Additional Accounts' look for the button labled `cs15lwi22***`
-
+2. Under 'Additional Accounts' click  the button labled `cs15lwi22***`
 ![Image](courseaccount.png)
 
-Your course specific account is your username listed on the page which is identified by the letters shown at the end of your username.
+3. Your course specific account is your username listed on the page which is identified by the letters shown at the end of your username.
 
 ### Using SSH
 ---
@@ -48,13 +48,13 @@ We will be using Visual Studio Code to connect to the remote servers. Open VSCod
 
 ![Image](newterminal.png)
 
-Enter this into the terminal with the letters `zz` replaced with the letters from the end of your username.
+Enter this into the terminal with `**` replaced with the letters from the end of your username.
 ```
-$ ssh cs15lwi22zz@ieng6.ucsd.edu
+$ ssh cs15lwi22**@ieng6.ucsd.edu
 ```
 The first time you connect to the server your computer may give you this warning message. 
 ```
-$ ssh cs15lwi22***@ieng6.ucsd.edu
+$ ssh cs15lwi22**@ieng6.ucsd.edu
 The authenticity of host 'ieng6.ucsd.edu (128.54.70.227)' can't be established.
 RSA key fingerprint is SHA256:kshsjr6nYH+sySHnhwerjsu7grPEyZTDl/1xgsyd4cec.
 Are you sure you want to continue connecting (yes/no/[fingerprint])? 
@@ -107,9 +107,9 @@ class WhereAmI {
 
 Run it using `javac` and `java` on your computer and see what it prints out. 
 
-Now, using the `SCP` command we are going to copy it to the server we were logged into before. In the terminal from the directory where the file we made is located, run the command below replacing `zz` with the letters from your course-specific account. 
+Now, using the `scp` command we are going to copy it to the server we were logged into before. In the terminal from the directory where the file we made is located, run the command below replacing `**` with the letters from your course-specific account. 
 ```
-$ scp WhereAmI.java cs15lwi22zz@ieng6.ucsd.edu:~/
+$ scp WhereAmI.java cs15lwi22**@ieng6.ucsd.edu:~/
 ```
 Just like with SSH, it will ask you for a password which you should type in and then hit `enter`. 
 
@@ -157,7 +157,7 @@ Now back on your computer, use `scp` to copy the **PUBLIC** key over to the serv
 ```
 $ scp C:\Users\Username\.ssh cs15lwi22**@ieng6.ucsd.edu:~/.ssh/authorized_keys
 ```
-You should replace the file path above with the file path to your` .pub` file and your course specific account username instead of `cs15lwi22**`
+You should replace the file path above with the file path to your`.pub` file and your course specific account username instead of `cs15lwi22**`
 
 After this file is copied over, you should be able to `ssh` or `scp` to the server without entering your password.
 

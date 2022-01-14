@@ -81,6 +81,7 @@ Below are some commands that you might want to try and run.
 |cat /home/linux/ieng6/cs15lwi22/public/hello.txt|
 
 For example:
+
 ![Image](cmdexample.png)
 
 After you use some of these commands you should log out of the server using either:

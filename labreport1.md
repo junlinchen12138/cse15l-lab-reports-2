@@ -3,11 +3,23 @@
 # Lab Report 1
 by Moshe Bookstein
 
-Updated: Jan 13, 2022 03:35 UTC
+Updated: Jan 13, 2022 03:38 UTC
 
 [For a summary click here](https://mbookucsd.github.io/cse15l-lab-reports/labreport1.html#summary)
 
 # Full Guide
+1. [Installing VScode](https://mbookucsd.github.io/cse15l-lab-reports/labreport1.html#installing-vscode)
+
+2. [Remotely Connecting](https://mbookucsd.github.io/cse15l-lab-reports/labreport1.html#remote-connection)
+
+3. [Trying Some Commands](https://mbookucsd.github.io/cse15l-lab-reports/labreport1.html#trying-some-commands)
+
+4. [Moving Files with scp](https://mbookucsd.github.io/cse15l-lab-reports/labreport1.html#moving-files-with-scp)
+
+5. [Setting an SSH Key](https://mbookucsd.github.io/cse15l-lab-reports/labreport1.html#setting-an-ssh-key)
+
+6. [Optimizing Remote Running](https://mbookucsd.github.io/cse15l-lab-reports/labreport1.html#optimizing-remote-running)
+
 ## Installing VScode
 ---
 The way that these instructions are written is using for use with VScode. However, they are not restricted to it only. If you don't have it installed, here is how you go about installing it.

@@ -1,4 +1,4 @@
-[<- Back](https://mbookucsd.github.io/cse15l-lab-reports/index.html)
+[<- Back](index.html)
 
 My name is Moshe Bookstein
 

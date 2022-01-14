@@ -1,3 +1,5 @@
+[<- Back](index.html)
+
 # Lab Report 1
 by Moshe Bookstein
 
@@ -7,6 +9,10 @@ by Moshe Bookstein
 The way that these instructions are written is using vs code. If you've never used vs code before, or you don't have it installed. Here is how you go about installing it.
 
 Visit [https://code.visualstudio.com/](https://code.visualstudio.com/) and click download. After it downloads, click on it and go through the install proccess.
+
+Once you install, you should see this open up
+![Image](vsstartup.png)
+
 
 
 ## Remote Connection
@@ -57,23 +63,7 @@ If this is the first time you've connected to the server, you should click yes. 
 
 Type ```yes``` and then after hitting enter, type in your password. As you type in your password, nothing should show up on the terminal, but once you put your password in fully, hit enter. if what you get looks like this, congratulations you have successfully logged in. 
 
-```
-Last login: Wed Jan 5 14:49:30 2022 from 68-21-***-**.lightspeed.irvnca.sbcglobal.net
-
-quota: No filesystem specified.
-Hello cs15lwi22***, you are currently logged into ieng6-203.ucsd.edu
-
-You are using 0% CPU on this system
-
-Cluster Status
-Hostname     Time    #Users  Load  Averages
-ieng6-201   21:30:01   15  2.11,  2.24,  2.29
-ieng6-202   21:30:01   11  1.64,  1.73,  1.77
-ieng6-203   21:30:01   19  0.22,  0.37,  0.40
-
-
-Wed Jan 12, 2022  9:30pm - Prepping cs15lwi22
-```
+![Image](login.png)
 
 
 ## Trying Some Commands
@@ -89,6 +79,8 @@ Below are some commands that you might want to try and run.
 |cp /home/linux/ieng6/cs15lwi22/public/hello.txt ~/|
 |cat /home/linux/ieng6/cs15lwi22/public/hello.txt|
 
+For example:
+![Image](cmdexample.png)
 
 After you use some of these commands you should log out of the server using either:
 
@@ -125,47 +117,64 @@ Now login to `ieng6` again using SSH, and use the `ls` command. you should see t
 
 While you are still logged into the server, try running the file with `javac` and `java` and see how the output of the file differs from when you ran it locally on your own computer. 
 
-# **Important!!!** 
+![Image](movefiles.png)
+
+
+##  **Important!!!** 
 **Something to be aware of is that *SCP DOES NOT CHECK* if that file already exists in the directory. If it finds a file with the same name, it will just overwrite that file. You should try this, make a change to the file you have saved locally, use SCP to copy it over to the server again, and then run it again and see if the output has changed.** 
 ---
 
----
+
 ## Setting an SSH Key
+---
 While typing your password in once or twice doesn't seem like it takes much time, over the course of even a quarter, you might type it in a hundred or two hundred times. This is a significant amount of time to be spending typing in your password, and people that figured out better ways of confirming that the person running the command is authorized to do so. we are going to be using something called an SSH key to pre-approve our computer to log into the server without having to type in the password every time. 
 
 The main idea behind an SSH key is that on our computer, we create a public and private key using the command `ssh-keygen` . we give the public key to the server and keep the private key on our machine, and then when we try to log into the server the server will check with our computer that have the private key. If we do it will just log us in. This is an extremely common setup in any work environment that requires using code on a server. 
 
 Below is what you should run on your computer(the client)
+
 *Instead of the file xxxxxxxxxxxxx, enter a path to the new file location on your computer such as C:\Users\Username/.ssh/id_rsa*
-```
-$ ssh-keygen
-Generating public/private rsa key pair.
-Enter file in which to save the key (C:\Users\Moshe/.ssh/id_rsa): xxxxxxxxxxxxx
-Enter passphrase (empty for no passphrase):
-Enter same passphrase again:
-Your identification has been saved in example.
-Your public key has been saved in example.pub.
-The key fingerprint is:
-SHA256:mwE2E0rC/MU2dzBiSuXub7qcfr6wYx5LIK5J/DF6tIQ moshe@DESKTOP
-The key's randomart image is:
-+---[RSA 3072]----+
-| o..o +          |
-|  *o==..         |
-|   .  . S        |
-|.   .o o +       |
-| o.Eoo+ o        |
-| . =.BB          |
-|    +o.=         |
-|.o.=o+.*.        |
-|o..o*=Ooo.       |
-+----[SHA256]-----+
-```
+
+![Image](sshkeygen.png)
+
 If you’re on Windows, follow the extra `ssh-add` steps here: [https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation](https://docs.microsoft.com/en-us/windows-server/administration/openssh/openssh_keymanagement#user-key-generation)
 
 This process created two new files on your computer, a **public** key and a *private* key. The private key in the example above is labeled `id_rsa`. The **public** key is labeled very similarly, `id_rsa.pub`. Both are stored in the `.ssh` directory on your computer, which is where they should be located. 
 
+Now that we have generated our key set, you should copy the public key to the `.ssh` directory within your user folder on the server. 
+
+First we need to use `mkdir` to create the directory. Mkdir makes a directory within the directory you currently are in. So `ssh` into the server, and make a directory and then exit the server.
+
+```
+$ ssh cs15lwi22**@ieng6.ucsd.edu
+Password:
+```
+```
+$ mkdir .ssh
+```
+
+Now back on your computer, use `scp` to copy the **PUBLIC** key over to the server.
+```
+$ scp C:\Users\Username\.ssh cs15lwi22**@ieng6.ucsd.edu:~/.ssh/authorized_keys
+```
+You should replace the file path above with the file path to your` .pub` file and your course specific account username instead of `cs15lwi22**`
+
+After this file is copied over, you should be able to `ssh` or `scp` to the server without entering your password.
 
 ## Optimizing Remote Running
+--- 
+Now that we have set up power computers to more easily connect to the server, you may be wondering if there's even more pleasant ways of executing commands on the server, and there are. 
+
+Hints:
+
+* After the SSH commands, you can include other commands located within quotes that will execute on the home directory of the server you're logging into. 
+```
+$ ssh cs15lwi22@ieng6.ucsd.edu "ls -a"
+```
+* Using the up and down arrow keys will bring up the most recently used commands you have typed in.
+
+* You can separate commands with semi-colons to execute multiple commands in one line like this:
+![Image](multicommand.png)
 
 
-![Image](vsstartup.png)
+Great job, you can now access, copy files to, and run commands on a remote server.

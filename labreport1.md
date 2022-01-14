@@ -3,7 +3,7 @@
 # Lab Report 1
 by Moshe Bookstein
 
-[For a summary click here](labreport1.html#Summary)
+[For a summary click here](https://mbookucsd.github.io/cse15l-lab-reports/labreport1.html#summary)
 
 # Full Guide
 ## Installing VScode

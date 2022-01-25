@@ -200,6 +200,21 @@ $ ssh cs15lwi22@ieng6.ucsd.edu "ls -a"
 
 Great job, you can now access, copy files to, and run commands on a remote server.
 
+We can use this to make changes to files and then send the her versions to the server.
+After using VSCode to make changes to the file and saving it, it only takes me 9 keystrokes to upload the file again and then run it because we can use the up arrow keys to run commands we have previously.
+
+```
+$ scp WhereAmI.java cs15lwi22**@ieng6.ucsd.edu:~/
+```
+```
+[cs15lwi22**@ieng6] javac WhereAmI.java
+```
+```
+[cs15lwi22**@ieng6] java WhereAmI
+```
+This only takes three commands and a total of 9 keystrokes to navigate and run to these commands as we have run them recently.
+
+
 
 ## Summary
 

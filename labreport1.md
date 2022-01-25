@@ -326,5 +326,5 @@ There are some ways to optimise running commands remotely, some are listed below
 
 3. You can separate commands with semi-colons within quotes to execute multiple commands in one line like this:
 ```
-ssh cs15lwi22ahy@ieng6.ucsd.edu "ls -a; javac WhereAmI.java; java WhereAmI"
+ssh cs15lwi22**@ieng6.ucsd.edu "ls -a; javac WhereAmI.java; java WhereAmI"
 ```

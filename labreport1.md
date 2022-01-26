@@ -3,7 +3,7 @@
 # Lab Report 1
 by Moshe Bookstein
 
-Updated: Jan 13, 2022 03:40 UTC
+Updated: Jan 25, 2022 09:05 UTC
 
 [For a summary click here](https://mbookucsd.github.io/cse15l-lab-reports/labreport1.html#summary)
 

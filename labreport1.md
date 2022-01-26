@@ -3,9 +3,9 @@
 # Lab Report 1
 by Moshe Bookstein
 
-Updated: Jan 25, 2022 09:05 UTC
+Updated: Jan 25, 2022 09:06 UTC
 
-[For a summary click here](https://mbookucsd.github.io/cse15l-lab-reports/labreport1.html#summary)
+[For a summary click here ](https://mbookucsd.github.io/cse15l-lab-reports/labreport1.html#summary) <-- This doesn't cover everthing
 
 # Full Guide
 1. [Installing VScode](https://mbookucsd.github.io/cse15l-lab-reports/labreport1.html#installing-vscode)

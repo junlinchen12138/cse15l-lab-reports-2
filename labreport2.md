@@ -3,7 +3,7 @@
 # Lab Report 2
 by Moshe Bookstein
 
-Updated: Jan 28, 2022 07:52 UTC
+Updated: Jan 28, 2022 07:59 UTC
 ## Table of Contents
 ---
 1. [Infinite Loop Bug](#code-change-1)
@@ -48,7 +48,7 @@ at MarkdownParse.getLinks(MarkdownParse.java:30)
 at MarkdownParse.main(MarkdownParse.java:43)
 
 ```
-The symptom was that there was an index out of bounds exceptions thrown. The bug was that the code that checked for the next part of the link never took into account that brackets could be intentionally put in the text of the file without them implying a link, so when the body of the link did not follow, it went out of bounds when trying to get a substring of something that did not exist. The failure inducing input was a file with brackets within its text that were not meant to be links.
+The symptom was that there was an index out of bounds exceptions thrown. The bug was that the code that checked for the next part of the link never took into account that brackets could be intentionally put in the text of the file without them implying a link, so when the body of the link did not follow, it went out of bounds when trying to get a substring of something that did not exist. The failure inducing input was a file with brackets within its text that did not follow the template of a link.
 
 ## Code Change 3:
 #### The Images as Links Bug
@@ -63,4 +63,4 @@ java MarkdownParse.java test-file6.md
 [page.com]
 ```
 
-The symptom was the URL of an image on the page being printed out when it was not supposed to. The bug was that the code that checked for where links are assumed that everything that followed the template of []() was a link, however, images are also templated the same way while just including an ! directly before the []() and so were included. The failure inducing input was a file with an image on it with the URL “page.com”.
+The symptom was the URL of an image on the page being printed out when it was not supposed to. The bug was that the code that checked for where links are assumed that everything that followed the template of \[\]\(\) was a link, however, images are also templated the same way while just including an \! directly before the \[\]\(\) and so were included. The failure inducing input was a file with an image on it with the URL “page.com”.

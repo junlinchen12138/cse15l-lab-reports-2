@@ -6,11 +6,11 @@ by Moshe Bookstein
 Updated: Jan 27, 2022 09:06 UTC
 ## Table of Contents
 ---
-1. [Infinite Loop Bug](#codechange1)
+1. [Infinite Loop Bug](#code-change-1)
 
-2. [Non-Link Bracket Bug](#codechange1)
+2. [Non-Link Bracket Bug](#code-change-1)
 
-3. [Images as Links Bug](#codechange1)
+3. [Images as Links Bug](#code-change-1)
 
 
 

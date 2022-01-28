@@ -8,9 +8,9 @@ Updated: Jan 28, 2022 07:52 UTC
 ---
 1. [Infinite Loop Bug](#code-change-1)
 
-2. [Non-Link Bracket Bug](#code-change-1)
+2. [Non-Link Bracket Bug](#code-change-2)
 
-3. [Images as Links Bug](#code-change-1)
+3. [Images as Links Bug](#code-change-3)
 
 
 

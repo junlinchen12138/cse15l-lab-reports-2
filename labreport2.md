@@ -3,7 +3,7 @@
 # Lab Report 2
 by Moshe Bookstein
 
-Updated: Jan 27, 2022 09:06 UTC
+Updated: Jan 28, 2022 07:52 UTC
 ## Table of Contents
 ---
 1. [Infinite Loop Bug](#code-change-1)

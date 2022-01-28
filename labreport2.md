@@ -64,3 +64,7 @@ java MarkdownParse.java test-file6.md
 ```
 
 The symptom was the URL of an image on the page being printed out when it was not supposed to. The bug was that the code that checked for where links are assumed that everything that followed the template of \[\]\(\) was a link, however, images are also templated the same way while just including an \! directly before the \[\]\(\) and so were included. The failure inducing input was a file with an image on it with the URL “page.com”.
+
+
+
+###### Note: The group repo was not functional and so I had to remake it for this lab.

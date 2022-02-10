@@ -31,7 +31,8 @@ Now we log into the ieng6 server with `ssh` and the `cd` into the markdown-parse
 ---
 To combine all the commands to do this in one command I have adjusted the command a little due to a misconfiguration of the ieng6 server. *More info in [this](https://piazza.com/class/kxs0toocqhv4og?cid=354) piazza post.*
 
-this is the one line command I eneded up with.
+This is the one line command I ended up with.
+
 ```
 ssh cs15lwi22ahy@ieng6.ucsd.edu "mkdir markdown-parse"; scp -r *.java *.md lib/ cs15lwi22ahy@ieng6.ucsd.edu:~/markdown-parse; ssh cs15lwi22ahy@ieng6.ucsd.edu "cd markdown-parse/; /software/CSE/oracle-java-se-14/jdk-14.0.2/bin/javac -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar MarkdownParse.java MarkdownParseTest.java; /software/CSE/oracle-java-se-14/jdk-14.0.2/bin/java -cp .:lib/junit-4.13.2.jar:lib/hamcrest-core-1.3.jar org.junit.runner.JUnitCore MarkdownParseTest;"
 ```

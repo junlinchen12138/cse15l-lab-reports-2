@@ -9,6 +9,8 @@ Lab Reports:
 
 [Lab Report 2](labreport2.html)
 
+[Lab Report 3](lab-report-3-week-6.md)
+
 Other
 ---
 [Markdown Example](markdownexample.html)

@@ -18,9 +18,13 @@ Updated: Feb 24, 2022 15:47 UTC
 ## Snippet 1
 
 ### What output should be.
-```[`google.com,google.com,ucsd.edu]```
+
+```
+[`google.com,google.com,ucsd.edu]
+```
 
 ### How it was made a test
+
 ```
     @Test
     public void testSnip1() throws IOException, NoSuchFileException {
@@ -37,7 +41,9 @@ Updated: Feb 24, 2022 15:47 UTC
 ```
 
 ### Output When Running Given Implementation
+
 Did not pass
+
 ```
 JUnit version 4.13.2
 ...E...
@@ -54,7 +60,9 @@ java.lang.AssertionError: expected:<[`google.com, google.com, ucsd.edu]> but was
 ```
 
 ### Output When Running My Implementation
+
 Did not pass
+
 ```
 JUnit version 4.13.2
 ..E..........
@@ -68,15 +76,19 @@ java.lang.AssertionError: expected:<[`google.com, google.com, ucsd.edu]> but was
         at org.junit.Assert.assertEquals(Assert.java:146)
         at MarkdownParseTest.testSnip1(MarkdownParseTest.java:200)
 
-F```
+```
 
 ---
 ## Snippet 2
 
 ### What output should be.
-`[a.com(()),example.com]`
+
+```
+[a.com(()),example.com]
+```
 
 ### How it was made a test
+
 ```
     @Test
     public void testSnip2() throws IOException, NoSuchFileException {
@@ -93,7 +105,9 @@ F```
 ```
 
 ### Output When Running Given Implementation
+
 Did not pass
+
 ```
 JUnit version 4.13.2
 ...E...
@@ -110,7 +124,9 @@ java.lang.AssertionError: expected:<[a.com(()), example.com]> but was:<[a.com, a
 ```
 
 ### Output When Running My Implementation
+
 Did not pass
+
 ```
 JUnit version 4.13.2
 ..E..........
@@ -124,14 +140,18 @@ java.lang.AssertionError: expected:<[a.com(()), example.com]> but was:<[a.com, a
         at org.junit.Assert.assertEquals(Assert.java:146)
         at MarkdownParseTest.testSnip2(MarkdownParseTest.java:212)
 
-F```
+```
 
 ## Snippet 3
 
 ### What output should be.
-`[https://ucsd-cse15l-w22.github.io/]`
+
+```
+[https://ucsd-cse15l-w22.github.io/]
+```
 
 ### How it was made a test
+
 ```
     @Test
     public void testSnip1() throws IOException, NoSuchFileException {
@@ -148,7 +168,9 @@ F```
 ```
 
 ### Output When Running Given Implementation
+
 Did not pass
+
 ```
 JUnit version 4.13.2
 ...E...
@@ -163,8 +185,11 @@ java.lang.AssertionError: expected:<[https://ucsd-cse15l-w22.github.io/]> but wa
         at MarkdownParseTest.testSnip3(MarkdownParseTest.java:76)
 
 ```
+
 ### Output When Running My Implementation
+
 Did not pass
+
 ```
 JUnit version 4.13.2
 ..E..........
@@ -178,7 +203,7 @@ java.lang.AssertionError: expected:<[https://ucsd-cse15l-w22.github.io/]> but wa
         at org.junit.Assert.assertEquals(Assert.java:146)
         at MarkdownParseTest.testSnip3(MarkdownParseTest.java:224)
 
-F```
+```
 
 
 ## Questions

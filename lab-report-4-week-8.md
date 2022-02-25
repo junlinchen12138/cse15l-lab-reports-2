@@ -3,16 +3,27 @@
 # Lab Report 4
 by Moshe Bookstein
 
-Updated: Feb 24, 2022 15:47 UTC
+Updated: Feb 25, 2022 20:32 UTC
 ## Table of Contents
----
+
+- [Snippet 1](#snippet-1)
+
+- [Snippet 2](#snippet-2)
+
+- [Snippet 3](#snippet-3)
 
 
 ## Repos
-[My Repo](https://github.com/mBookUCSD/markdown-parse)
+---
 
-[Original Repo Provided](https://github.com/ucsd-cse15l-w22/markdown-parse) 
-#### *[Here is the copy I made changes to.](https://github.com/mBookUCSD/MDParseLab8Provided)*
+1. [My Repo](https://github.com/mBookUCSD/markdown-parse)
+
+2. [Original Repo Provided Week 7](https://github.com/floatboat/markdown-parse.git)
+
+
+3. [Week 8 Lab Repo](https://github.com/ucsd-cse15l-w22/markdown-parse) 
+   #### *[(Here is the copy of week 8 I made changes to.)](https://github.com/mBookUCSD/MDParseLab8Provided)*
+
 
 ---
 ## Snippet 1
@@ -40,7 +51,21 @@ Updated: Feb 24, 2022 15:47 UTC
     }
 ```
 
-### Output When Running Given Implementation
+### Output When Running Implementation From Week 7 review team.
+
+Did not pass because their method header is out of specification
+
+```
+MarkdownParseTest.java:42: error: incompatible types: String cannot be converted to String[]
+        ArrayList<String> links = MarkdownParse.getLinks(contents);
+                                                         ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+1 error
+make: *** [MarkdownParseTest.class] Error 1
+```
+
+### Output when running against repo provided this week for lab
+*Just incase, lab report instructions unclear*
 
 Did not pass
 
@@ -58,6 +83,7 @@ java.lang.AssertionError: expected:<[`google.com, google.com, ucsd.edu]> but was
         at MarkdownParseTest.testSnip1(MarkdownParseTest.java:52)
 
 ```
+
 
 ### Output When Running My Implementation
 
@@ -104,7 +130,21 @@ java.lang.AssertionError: expected:<[`google.com, google.com, ucsd.edu]> but was
     }
 ```
 
-### Output When Running Given Implementation
+### Output When Running Implementation From Week 7 review team.
+
+Did not pass because their method header is out of specification
+
+```
+MarkdownParseTest.java:55: error: incompatible types: String cannot be converted to String[]
+        ArrayList<String> links = MarkdownParse.getLinks(contents);
+                                                         ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+1 error
+make: *** [MarkdownParseTest.class] Error 1
+```
+
+### Output when running against repo provided this week for lab
+*Just incase, lab report instructions unclear*
 
 Did not pass
 
@@ -122,6 +162,7 @@ java.lang.AssertionError: expected:<[a.com(()), example.com]> but was:<[a.com, a
         at MarkdownParseTest.testSnip2(MarkdownParseTest.java:64)
 
 ```
+
 
 ### Output When Running My Implementation
 
@@ -167,7 +208,21 @@ java.lang.AssertionError: expected:<[a.com(()), example.com]> but was:<[a.com, a
     }
 ```
 
-### Output When Running Given Implementation
+### Output When Running Implementation From Week 7 review team.
+
+Did not pass becuse their method header is out of specification
+
+```
+MarkdownParseTest.java:68: error: incompatible types: String cannot be converted to String[]
+        ArrayList<String> links = MarkdownParse.getLinks(contents);
+                                                         ^
+Note: Some messages have been simplified; recompile with -Xdiags:verbose to get full output
+1 error
+make: *** [MarkdownParseTest.class] Error 1
+```
+
+### Output when running against repo provided this week for lab
+*Just incase, lab report instructions unclear*
 
 Did not pass
 

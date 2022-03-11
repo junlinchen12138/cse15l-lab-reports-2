@@ -3,7 +3,7 @@
 # Lab Report 5
 by Moshe Bookstein
 
-Updated: Mar 11, 2022 20:25 UTC
+Updated: Mar 11, 2022 20:37 UTC
 ## Table of Contents
 ---
 
@@ -89,7 +89,7 @@ Other Output `[]`
 
 The link should be included becuse it is within `<...>`. For the other implementation the bracket tracker gets rid of the link when it should not. To fix this would involve rewriting several key parts of the way that brackets are detected and writing a way to find and check if offending brackets are within `<...>`. My solution is closer but only by accident, since mine doesnt detect bracket issues like this, as seen in the first test above, it doesnt throw it away becuse of the brackets, but becuse it doesn't have any checks for `<...>`, it just includes it in the link even when it should not. To fix mine I would need to overhaul the bracket tracking, and implement a check for `<...>`.
 
-Code in my implementation to be fixed is in a similar place to the one above, but with the added issue of managing finding and tracking the effects of `<...>`.
+Code in my implementation to be fixed by writing a bunch of code to manage finding and tracking the effects of `<...>`. Not anywhere more specific in the code than just *somewhere* in the bracket tracking, as a lot needs to be overhauled to keep them in mind when moving around to find potential links.
 
 Code in the other implementation to be fixed is the close bracket finder as included below, with the added issue of managing finding and tracking the effects of `<...>`.
 

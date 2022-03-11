@@ -9,9 +9,9 @@ Updated: Mar 11, 2022 20:25 UTC
 
 - [How I found the differences in output]()
 
-- [Test 486](#test-496)
+- [Test 496](#test-496)
 
-- [Test 488](#test-498)
+- [Test 498](#test-498)
 
 
 ## How I found the differences in output
